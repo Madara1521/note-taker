@@ -1,16 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-import {Button} from 'react-bootstrap'
+import React from 'react'
+import styles from './App.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Header from './Components/Header/Header'
+import Navbar from './Components/Navbar/Navbar'
+import Footer from './Components/Footer/Footer'
 
-
-function App() {
+const App = () => {
   return (
-    <div>
- <h1>Hello Slavik Ukraine</h1>
-    <Button variant={'primary'}>Geroyam slava</Button>
+    <div className={styles.appWrapper}>
+      <Header className={styles.header}/>
+      <Navbar className={styles.navbar}/>
+      <Footer className={styles.footer}/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,0 +1,19 @@
+.appWrapper {
+    display: grid;
+
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 2fr 10fr;
+    grtd-gap: 10px;
+}
+
+.header {
+    grid-area: header;
+}
+
+.navbar {
+    grid-area: navbar;
+}
+
+.footer {
+    grid-area: footer;
+}
