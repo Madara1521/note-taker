@@ -1,19 +1,31 @@
 .appWrapper {
     display: grid;
 
+    grid-template-areas:
+'header header'
+    'navbar content';
+
     grid-template-rows: 60px 1fr;
     grid-template-columns: 2fr 10fr;
-    grtd-gap: 10px;
+    /*grtd-gap: 10px;*/
 }
 
 .header {
     grid-area: header;
+    background-color: gray;
 }
 
 .navbar {
     grid-area: navbar;
+    background-color: rosybrown;
 }
 
 .footer {
     grid-area: footer;
+    background-color: aqua;
+}
+
+.content {
+    gird-area: content;
+    background-color: blueviolet;
 }

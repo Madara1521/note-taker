@@ -1,10 +1,10 @@
 import React from 'react'
+import styles from './Header.module.css'
 
 const Header = () => {
   return (
-    <div>
-      <img alt={'img'}/>
-      <h1>Hello Slavik Ukraine</h1>
+    <div className={styles.header}>
+      <p>Hello Slavik Ukraine</p>
     </div>
   )
 }
