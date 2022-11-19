@@ -1,0 +1,5 @@
+.bottom {
+    gird-area: bottom;
+    grid-column: 1/4;
+    background-color: darkgray;
+}

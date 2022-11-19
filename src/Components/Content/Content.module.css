@@ -1,4 +1,9 @@
 .content {
     gird-area: content;
-    background-color: blueviolet;
+    grid-column: 2/4;
+
+    display: grid;
+    grid-template-areas:'notes noteDir';
+    grid-template-columns: 1fr 1fr;
 }
+
