@@ -2,11 +2,10 @@
     display: grid;
 
     grid-template-areas:
-'header header header'
+    'header header header'
     'sidebar content content'
-    'bottom bottom bottom'
-;
+    'bottom bottom bottom';
 
     grid-template-columns: 1fr 1fr 2fr;
-    grid-template-rows: 50px 900px 30px;
+    grid-template-rows: 60px 890px 30px;
 }

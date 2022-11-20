@@ -3,7 +3,10 @@ import React from 'react'
 const Notes = () => {
   return (
     <div>
-      Notes
+      <div>Data and time</div>
+      <div>
+        Notes
+      </div>
     </div>
   )
 }

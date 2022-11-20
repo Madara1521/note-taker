@@ -1,4 +1,10 @@
 .header {
     grid-area: header;
     background-color: #e0e0e0;
+
+    display: grid;
+
+    grid-template-rows: 5px 40px 5px;
+    /*grid-column-gap: 10px;*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
