@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Content.module.css'
-import Notes from '../Sidebar/Notes/Notes'
 import NoteDirectory from './NoteDirectory/NoteDirectory'
+import Notes from './Notes/Notes'
 
 const Content = () => {
   return (

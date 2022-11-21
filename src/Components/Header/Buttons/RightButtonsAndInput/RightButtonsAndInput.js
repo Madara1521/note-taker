@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './RightButtonsAndInput.module.css'
-import { IconButton, TextField } from '@mui/material'
+import { IconButton } from '@mui/material'
 import IosShareOutlinedIcon from '@mui/icons-material/IosShareOutlined'
 
 const RightButtonsAndInput = () => {
@@ -9,7 +9,7 @@ const RightButtonsAndInput = () => {
       <IconButton>
         <IosShareOutlinedIcon/>
       </IconButton>
-      <TextField fullWidth label="search" id="fullWidth" className={styles.inputSearch}/>
+      <input className={styles.inputSearch}/>
     </div>
   )
 }

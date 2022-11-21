@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Notes = () => {
+const Notecomp = () => {
   return (
     <div>
       <div>Data and time</div>
@@ -11,4 +11,4 @@ const Notes = () => {
   )
 }
 
-export default Notes
+export default Notecomp
