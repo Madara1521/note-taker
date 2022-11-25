@@ -4,12 +4,10 @@ import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutli
 import TextFieldsOutlinedIcon from '@mui/icons-material/TextFieldsOutlined'
 import AutoAwesomeMotionOutlinedIcon from '@mui/icons-material/AutoAwesomeMotionOutlined'
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
-import styles from './CentralButtons.module.css'
 
-
-const LeftButtons = () => {
+const CenterButtons = () => {
   return (
-    <div className={styles.centralButtons}>
+    <div>
       <IconButton>
         <CheckCircleOutlineOutlinedIcon/>
       </IconButton>
@@ -26,4 +24,4 @@ const LeftButtons = () => {
   )
 }
 
-export default LeftButtons
+export default CenterButtons

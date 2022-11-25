@@ -4,12 +4,10 @@ import Crop32OutlinedIcon from '@mui/icons-material/Crop32Outlined'
 import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined'
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined'
 import BorderColorOutlinedIcon from '@mui/icons-material/BorderColorOutlined'
-import styles from './LeftButtons.module.css'
-
 
 const LeftButtons = () => {
   return (
-    <div className={styles.leftButtons}>
+    <div>
       <IconButton>
         <Crop32OutlinedIcon/>
       </IconButton>

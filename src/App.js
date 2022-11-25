@@ -1,16 +1,21 @@
 import React from 'react'
-import styles from './App.module.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './Components/Header/Header'
+import { Grid } from '@mui/material'
 import Sidebar from './Components/Sidebar/Sidebar'
 import Content from './Components/Content/Content'
 
 const App = () => {
   return (
-    <div className={styles.appWrapper}>
+    <div>
       <Header/>
-      <Sidebar/>
-      <Content/>
+      <Grid container columns={12}>
+        <Grid item xs={3}>
+          <Sidebar/>
+        </Grid>
+        <Grid xs={9}>
+          <Content/>
+        </Grid>
+      </Grid>
     </div>
   )
 }

@@ -1,19 +1,37 @@
 import React from 'react'
-import styles from './Header.module.css'
+import { AppBar, Grid, Toolbar, Typography } from '@mui/material'
 import LeftButtons from './Buttons/LeftButtons/LeftButtons'
-import CentralButtons from './Buttons/CentralButtons/CentralButtons'
-import RightButtonsAndInput from './Buttons/RightButtonsAndInput/RightButtonsAndInput'
-import HeaderIcons from './Buttons/HeaderIcons/HeaderIcons'
-
+import CenterButtons from './Buttons/CenterButtons/CenterButtons'
+import RightButtons from './Buttons/RightButtons/RightButtons'
 
 const Header = () => {
+
   return (
-    <div className={styles.header}>
-      <HeaderIcons/>
-      <LeftButtons/>
-      <CentralButtons/>
-      <RightButtonsAndInput/>
-    </div>
+    <AppBar position="static">
+      <Toolbar>
+        <Grid container columns={12}>
+
+          <Grid item xs={3}>
+            <Typography variant="h6" component="span">
+              Note
+            </Typography>
+          </Grid>
+
+          <Grid item xs={3}>
+            <LeftButtons/>
+          </Grid>
+          <Grid item xs={3}>
+            <CenterButtons/>
+          </Grid>
+
+          <Grid item xs={3}>
+            <RightButtons/>
+          </Grid>
+
+        </Grid>
+      </Toolbar>
+    </AppBar>
+
   )
 }
 

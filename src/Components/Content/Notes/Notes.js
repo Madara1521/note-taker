@@ -1,11 +1,17 @@
 import React from 'react'
-import styles from './Notes.module.css'
+
 
 const Notes = () => {
   return (
-    <div className={styles.notes}>
-      Notes
+    <div>
+      <div>
+        Data and time
+      </div>
+      <div>
+        Notes
+      </div>
     </div>
   )
 }
+
 export default Notes

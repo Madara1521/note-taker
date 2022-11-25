@@ -1,14 +1,18 @@
 import React from 'react'
-import styles from './Content.module.css'
 import NoteDirectory from './NoteDirectory/NoteDirectory'
 import Notes from './Notes/Notes'
+import { Grid } from '@mui/material'
 
 const Content = () => {
   return (
-    <div className={styles.content}>
-      <NoteDirectory/>
-      <Notes/>
-    </div>
+    <Grid container columns={9}>
+      <Grid item xs={4}>
+        <NoteDirectory/>
+      </Grid>
+      <Grid item xs={5}>
+        <Notes/>
+      </Grid>
+    </Grid>
   )
 }
 
