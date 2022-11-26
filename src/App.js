@@ -8,8 +8,8 @@ const App = () => {
   return (
     <div>
       <Header/>
-      <Grid container columns={12}>
-        <Grid item xs={3}>
+      <Grid container columns={12} sx={{border: '1px solid gray'}} >
+        <Grid item xs={3} sx={{border: '1px solid grey'}}>
           <Sidebar/>
         </Grid>
         <Grid xs={9}>

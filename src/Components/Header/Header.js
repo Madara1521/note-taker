@@ -8,8 +8,8 @@ const Header = () => {
 
   return (
     <AppBar position="static">
-      <Toolbar>
-        <Grid container columns={12}>
+      <Toolbar sx={{border: '1px solid grey'}}>
+        <Grid container columns={12} >
 
           <Grid item xs={3}>
             <Typography variant="h6" component="span">
