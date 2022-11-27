@@ -1,22 +1,24 @@
 import React from 'react'
 import Header from './Components/Header/Header'
-import { Grid } from '@mui/material'
+import { Box, Stack } from '@mui/material'
 import Sidebar from './Components/Sidebar/Sidebar'
-import Content from './Components/Content/Content'
+import Notes from './Components/Content/Notes/Notes'
+import NoteDirectory from './Components/Content/NoteDirectory/NoteDirectory'
 
 const App = () => {
   return (
-    <div>
+    <Box>
       <Header/>
-      <Grid container columns={12} sx={{border: '1px solid gray'}} >
-        <Grid item xs={3} sx={{border: '1px solid grey'}}>
-          <Sidebar/>
-        </Grid>
-        <Grid xs={9}>
-          <Content/>
-        </Grid>
-      </Grid>
-    </div>
+      <Stack direction="row">
+        <Sidebar/>
+        <Box flex={3}>
+          <NoteDirectory/>
+        </Box>
+        <Box flex={4}>
+          <Notes/>
+        </Box>
+      </Stack>
+    </Box>
   )
 }
 

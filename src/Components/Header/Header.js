@@ -7,9 +7,9 @@ import RightButtons from './Buttons/RightButtons/RightButtons'
 const Header = () => {
 
   return (
-    <AppBar position="static">
-      <Toolbar sx={{border: '1px solid grey'}}>
-        <Grid container columns={12} >
+    <AppBar position="static" color='otherColor'>
+      < Toolbar sx={{ border: '1px solid grey' }}>
+        <Grid container columns={12}>
 
           <Grid item xs={3}>
             <Typography variant="h6" component="span">

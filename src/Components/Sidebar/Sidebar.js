@@ -1,24 +1,27 @@
 import React from 'react'
 import Bottom from '../Bottom/Bottom'
-import { Typography } from '@mui/material'
-
+import { Box, Typography } from '@mui/material'
 
 const Sidebar = () => {
   return (
-    <div>
-      <div>
+    <Box
+      flex={3}
+      p={2}
+      sx={{ display: { xs: 'none', sm: 'block' } }}
+    >
+      <Box>
         <Typography>
           ICloud
         </Typography>
-        <div>
+        <Box>
           <Typography>All ICould</Typography>
           <Typography>Notes</Typography>
           <Typography>Imported Notes</Typography>
           <Typography>Recently Deleted</Typography>
-        </div>
-      </div>
+        </Box>
+      </Box>
       <Bottom/>
-    </div>
+    </Box>
   )
 }
 
