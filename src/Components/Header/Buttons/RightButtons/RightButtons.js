@@ -1,16 +1,20 @@
 import React from 'react'
 import IosShareOutlinedIcon from '@mui/icons-material/IosShareOutlined'
-import { Icons, Search } from '../../Header'
-import { InputBase, Stack } from '@mui/material'
+import { Box, InputBase, Stack } from '@mui/material'
+import { Icons, Search } from '../../StyledHeder/StyledAllHeader'
 
 const RightButtons = () => {
   return (
-    <Stack direction='row' spacing={1}>
-      <Icons>
-        <IosShareOutlinedIcon/>
-      </Icons>
-      <Search><InputBase placeholder='search'></InputBase></Search>
-    </Stack>
+    <Box flex={2}>
+      <Stack direction="row" spacing={1}>
+        <Icons>
+          <IosShareOutlinedIcon/>
+        </Icons>
+        <Search>
+          <InputBase placeholder="search"/>
+        </Search>
+      </Stack>
+    </Box>
   )
 }
 

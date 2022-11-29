@@ -1,16 +1,16 @@
 import React from 'react'
-
+import { Box } from '@mui/material'
 
 const Notes = () => {
   return (
-    <div>
+    <Box flex={4}>
       <div>
         Data and time
       </div>
       <div>
         Notes
       </div>
-    </div>
+    </Box>
   )
 }
 

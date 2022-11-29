@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './Components/Header/Header'
-import { Box, Stack } from '@mui/material'
+import { Stack } from '@mui/material'
 import Sidebar from './Components/Sidebar/Sidebar'
 import Notes from './Components/Content/Notes/Notes'
 import NoteDirectory from './Components/Content/NoteDirectory/NoteDirectory'
@@ -11,12 +11,8 @@ const App = () => {
       <Header/>
       <Stack direction="row">
         <Sidebar/>
-        <Box flex={3}>
-          <NoteDirectory/>
-        </Box>
-        <Box flex={4}>
-          <Notes/>
-        </Box>
+        <NoteDirectory/>
+        <Notes/>
       </Stack>
     </div>
   )
