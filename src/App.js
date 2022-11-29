@@ -7,7 +7,7 @@ import NoteDirectory from './Components/Content/NoteDirectory/NoteDirectory'
 
 const App = () => {
   return (
-    <Box>
+    <div>
       <Header/>
       <Stack direction="row">
         <Sidebar/>
@@ -18,7 +18,7 @@ const App = () => {
           <Notes/>
         </Box>
       </Stack>
-    </Box>
+    </div>
   )
 }
 

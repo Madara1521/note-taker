@@ -1,26 +1,28 @@
 import React from 'react'
-import { IconButton } from '@mui/material'
+
 import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined'
 import TextFieldsOutlinedIcon from '@mui/icons-material/TextFieldsOutlined'
 import AutoAwesomeMotionOutlinedIcon from '@mui/icons-material/AutoAwesomeMotionOutlined'
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
+import { Icons } from '../../Header'
+import { Stack } from '@mui/material'
 
 const CenterButtons = () => {
   return (
-    <div>
-      <IconButton>
+    <Stack direction='row' spacing={1}>
+      <Icons>
         <CheckCircleOutlineOutlinedIcon/>
-      </IconButton>
-      <IconButton>
+      </Icons>
+      <Icons>
         <TextFieldsOutlinedIcon/>
-      </IconButton>
-      <IconButton>
+      </Icons>
+      <Icons>
         <AutoAwesomeMotionOutlinedIcon/>
-      </IconButton>
-      <IconButton>
+      </Icons>
+      <Icons>
         <LockOutlinedIcon/>
-      </IconButton>
-    </div>
+      </Icons>
+    </Stack>
   )
 }
 

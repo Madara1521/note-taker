@@ -1,26 +1,27 @@
 import React from 'react'
-import { IconButton } from '@mui/material'
 import Crop32OutlinedIcon from '@mui/icons-material/Crop32Outlined'
 import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined'
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined'
 import BorderColorOutlinedIcon from '@mui/icons-material/BorderColorOutlined'
+import { Icons } from '../../Header'
+import { Stack } from '@mui/material'
 
 const LeftButtons = () => {
   return (
-    <div>
-      <IconButton>
+    <Stack direction='row' spacing={1}>
+      <Icons>
         <Crop32OutlinedIcon/>
-      </IconButton>
-      <IconButton>
+      </Icons>
+      <Icons>
         <GridViewOutlinedIcon/>
-      </IconButton>
-      <IconButton>
+      </Icons>
+      <Icons>
         <DeleteOutlineOutlinedIcon/>
-      </IconButton>
-      <IconButton>
+      </Icons>
+      <Icons>
         <BorderColorOutlinedIcon/>
-      </IconButton>
-    </div>
+      </Icons>
+    </Stack>
   )
 }
 
