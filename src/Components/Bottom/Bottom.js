@@ -1,13 +1,15 @@
 import React from 'react'
 import AddCircleOutlinedIcon from '@mui/icons-material/AddCircleOutlined'
-import styles from './Bottom.module.css'
+import { Box, Button, Typography } from '@mui/material'
 
 const Bottom = () => {
   return (
-    <div className={styles.bottom}>
-      <AddCircleOutlinedIcon/>
-      New Folder
-    </div>
+    <Box>
+      <Button sx={{borderRadius: '0px', width: '100%', justifyContent: 'start'}}>
+        <AddCircleOutlinedIcon/>
+        <Typography>New Folder</Typography>
+      </Button>
+    </Box>
   )
 }
 

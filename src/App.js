@@ -1,20 +1,20 @@
 import React from 'react'
 import Header from './Components/Header/Header'
-import { Stack } from '@mui/material'
+import { Box, Stack } from '@mui/material'
 import Sidebar from './Components/Sidebar/Sidebar'
 import Notes from './Components/Content/Notes/Notes'
 import NoteDirectory from './Components/Content/NoteDirectory/NoteDirectory'
 
 const App = () => {
   return (
-    <div>
+    <Box>
       <Header/>
-      <Stack direction="row">
+      <Stack sx={{ minHeight: 'calc(100vh - 66px)' }} direction="row">
         <Sidebar/>
         <NoteDirectory/>
         <Notes/>
       </Stack>
-    </div>
+    </Box>
   )
 }
 

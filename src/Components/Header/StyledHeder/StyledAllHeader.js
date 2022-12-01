@@ -10,7 +10,7 @@ export const Search = styled(Box)(({ theme }) => ({
   backgroundColor: 'white',
   borderRadius: theme.shape.borderRadius,
   padding: '3px',
-  height: '30px',
+  height: '25px',
   [theme.breakpoints.up('sm')]: {
     display: 'flex'
   }
@@ -22,7 +22,7 @@ export const Icons = styled(Box)(({ theme }) => ({
   color: 'grey',
   borderRadius: theme.shape.borderRadius,
   width: '50px',
-  height: '30px',
+  height: '25px',
   padding: '2px',
   justifyContent: 'center',
   border: '1px solid grey',
