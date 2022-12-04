@@ -3,6 +3,7 @@ import IosShareOutlinedIcon from '@mui/icons-material/IosShareOutlined'
 import { Box, InputBase, Stack } from '@mui/material'
 import { Icons, Search } from '../../StyledHeder/StyledAllHeader'
 
+
 const RightButtons = () => {
   return (
     <Box flex={2}>

@@ -1,29 +1,41 @@
 import React from 'react'
 import Bottom from '../Bottom/Bottom'
-import { Box, List, Typography } from '@mui/material'
+import { Box, List, Stack, Typography } from '@mui/material'
+import { makeStyles } from '@mui/styles'
+
+const useStyles = makeStyles(() => ({
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100%',
+    justifyContent: 'space-between'
+  }
+}))
 
 const Sidebar = () => {
+  const classes = useStyles()
+
   return (
     <Box
       flex={3}
-      sx={{ display: { xs: 'none', sm: 'block' },backgroundColor:'skyblue', }}
+      sx={{ display: { xs: 'none', sm: 'block' } }}
     >
-      <Box>
+      <Stack direction='column' alignItems='stretch' height="100%">
         <Typography>
           ICloud
         </Typography>
-        <List>
-          <Typography>All ICould</Typography>
-          <Typography>Notes</Typography>
-          <Typography>Imported Notes</Typography>
-          <Typography>Recently Deleted</Typography>
-        </List>
-      </Box>
-      <Bottom/>
+        <div className={classes.container}>
+          <List>
+            <Typography>All ICould</Typography>
+            <Typography>Notes</Typography>
+            <Typography>Imported Notes</Typography>
+            <Typography>Recently Deleted</Typography>
+          </List>
+          <Bottom/>
+        </div>
+      </Stack>
     </Box>
   )
 }
-
-
 
 export default Sidebar
