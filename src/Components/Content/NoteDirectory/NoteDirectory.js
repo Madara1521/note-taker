@@ -3,7 +3,7 @@ import { Box } from '@mui/material'
 
 const NoteDirectory = () => {
   return (
-    <Box flex={3}>
+    <Box flex={3} sx={{border:'1px solid #9e9e9e'}} >
       <div>
         Directory
       </div>

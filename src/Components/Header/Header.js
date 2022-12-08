@@ -1,16 +1,12 @@
 import React from 'react'
-import { AppBar, Typography, Box, styled } from '@mui/material'
+import { Typography, Box } from '@mui/material'
 import LeftButtons from './Buttons/LeftButtons/LeftButtons'
 import CenterButtons from './Buttons/CenterButtons/CenterButtons'
 import RightButtons from './Buttons/RightButtons/RightButtons'
 import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined'
-import { StyledToolbar } from './StyledHeder/StyledAllHeader'
+import { AppBarComponent, StyledToolbar } from './StyledHeder/StyledAllHeader'
 
-export const AppBarComponent = styled(AppBar)({
-  position:'static',
-  color:'black',
-  background: 'linear-gradient(0deg, rgba(190,190,190,1) 0%, rgba(214,214,214,1) 11%, rgba(242,241,241,1) 58%)'
-})
+
 
 const Header = () => {
   return (

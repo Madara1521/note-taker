@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './Components/Header/Header'
 import { Box, Stack } from '@mui/material'
-import Sidebar from './Components/Sidebar/Sidebar'
+import Sidebar from './Components/Content/Sidebar/Sidebar'
 import Notes from './Components/Content/Notes/Notes'
 import NoteDirectory from './Components/Content/NoteDirectory/NoteDirectory'
 
