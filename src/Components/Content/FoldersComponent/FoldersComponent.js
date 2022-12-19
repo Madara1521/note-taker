@@ -1,25 +1,15 @@
 import React from 'react'
 import Bottom from '../Bottom/Bottom'
-import { Box, Stack, styled, Typography } from '@mui/material'
-import { makeStyles } from '@mui/styles'
+import { Box, Stack, Typography } from '@mui/material'
+import { FileComponent, useStyles } from './FoldersStyled/FoldersStyled'
+import { connect } from 'react-redux'
+import { setTitle } from '../../Redux/store'
 
-const useStyles = makeStyles(() => ({
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    height: '100%',
-    justifyContent: 'space-between',
-  }
-}))
-
-export const FileComponent = styled('div')(() => ({
-  display: 'flex',
-  padding: '5px'
-}))
-
-const Sidebar = () => {
+const FoldersComponent = () => {
   const classes = useStyles()
-
+  const foldersClick = () => {
+    console.log('hello')
+  }
 
   return (
     <Box
@@ -32,7 +22,7 @@ const Sidebar = () => {
         </Typography>
         <div className={classes.container}>
           <div>
-            <FileComponent>All ICould</FileComponent>
+            <FileComponent onClick={foldersClick}>All ICould</FileComponent>
             <FileComponent>Notes</FileComponent>
             <FileComponent>Imported Notes</FileComponent>
             <FileComponent>Recently Deleted</FileComponent>
@@ -44,4 +34,10 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar
+const mapStateToProps = (state) => {
+  return {
+    title: state.title
+  }
+}
+
+export default connect(mapStateToProps, { setTitle })(FoldersComponent)
