@@ -1,15 +1,13 @@
 import React from 'react'
 import Bottom from '../Bottom/Bottom'
 import { Box, Stack, Typography } from '@mui/material'
-import { FileComponent, useStyles } from './FoldersStyled/FoldersStyled'
+import { useStyles } from './FoldersStyled/FoldersStyled'
 import { connect } from 'react-redux'
 import { setTitle } from '../../Redux/store'
 
+
 const FoldersComponent = () => {
   const classes = useStyles()
-  const foldersClick = () => {
-    console.log('hello')
-  }
 
   return (
     <Box
@@ -21,11 +19,8 @@ const FoldersComponent = () => {
           ICloud
         </Typography>
         <div className={classes.container}>
-          <div>
-            <FileComponent onClick={foldersClick}>All ICould</FileComponent>
-            <FileComponent>Notes</FileComponent>
-            <FileComponent>Imported Notes</FileComponent>
-            <FileComponent>Recently Deleted</FileComponent>
+          <div className={classes.folders}>
+            <div className={classes.fileComponent}>All ICould</div>
           </div>
           <Bottom/>
         </div>

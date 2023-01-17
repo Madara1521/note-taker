@@ -1,5 +1,5 @@
 import { makeStyles } from '@mui/styles'
-import { styled } from '@mui/material'
+
 
 export const useStyles = makeStyles(() => ({
   container: {
@@ -7,10 +7,16 @@ export const useStyles = makeStyles(() => ({
     flexDirection: 'column',
     height: '100%',
     justifyContent: 'space-between',
+  },
+  folders: {
+    overflowY: 'scroll',
+    height: 'calc(93vh - 70px)',
+  },
+  fileComponent: {
+    display: 'flex',
+    padding: '5px',
+    cursor: 'pointer'
   }
+
 }))
 
-export const FileComponent = styled('div')(() => ({
-  display: 'flex',
-  padding: '5px'
-}))
