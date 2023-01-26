@@ -1,6 +1,5 @@
 import { makeStyles } from '@mui/styles'
 
-
 export const useStyles = makeStyles(() => ({
   container: {
     display: 'flex',
@@ -9,14 +8,17 @@ export const useStyles = makeStyles(() => ({
     justifyContent: 'space-between',
   },
   folders: {
-    overflowY: 'scroll',
     height: 'calc(93vh - 70px)',
   },
-  fileComponent: {
+
+  foldersComponent: {
     display: 'flex',
     padding: '5px',
-    cursor: 'pointer'
-  }
+    cursor: 'pointer',
+    '&:hover': {
+      background: '#ddd'
+    }
+  },
 
 }))
 

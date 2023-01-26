@@ -5,5 +5,5 @@ export const NewFolder = styled(Button)({
   width: '100%',
   display: 'flex',
   justifyContent: 'start',
-  borderRadius: '0',
+  borderRadius: '0'
 })

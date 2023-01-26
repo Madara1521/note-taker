@@ -5,8 +5,7 @@ import { useStyles } from './FoldersStyled/FoldersStyled'
 import { connect } from 'react-redux'
 import { setTitle } from '../../Redux/store'
 
-
-const FoldersComponent = () => {
+const FoldersComponent = ({ folders, onAddFolder }) => {
   const classes = useStyles()
 
   return (
@@ -20,9 +19,13 @@ const FoldersComponent = () => {
         </Typography>
         <div className={classes.container}>
           <div className={classes.folders}>
-            <div className={classes.fileComponent}>All ICould</div>
+            {folders.map((folder) => (
+              <div className={classes.foldersComponent}>
+                {folder.title}
+              </div>
+            ))}
           </div>
-          <Bottom/>
+          <Bottom onAddFolder={onAddFolder}/>
         </div>
       </Stack>
     </Box>

@@ -5,9 +5,9 @@ import { NewFolder } from './StyledBottom'
 
 
 
-const Bottom = () => {
+const Bottom = ({onAddFolder}) => {
   return (
-    <NewFolder>
+    <NewFolder onClick={onAddFolder}>
       <AddCircleOutlinedIcon/>
       <Typography variant="h7">New Folder</Typography>
     </NewFolder>
