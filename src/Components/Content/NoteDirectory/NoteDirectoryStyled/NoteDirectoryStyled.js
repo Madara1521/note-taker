@@ -2,7 +2,8 @@ import { makeStyles } from '@mui/styles'
 
 export const useStylesDirectory = makeStyles(() => ({
   files: {
-    height: 'calc(93vh - 70px)',
+    height: 'calc(93vh - 0px)',
+    overflowY: 'scroll'
   },
 
   fileComponent: {

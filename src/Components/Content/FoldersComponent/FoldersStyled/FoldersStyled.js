@@ -9,6 +9,7 @@ export const useStyles = makeStyles(() => ({
   },
   folders: {
     height: 'calc(93vh - 70px)',
+    overflowY: 'scroll'
   },
 
   foldersComponent: {
