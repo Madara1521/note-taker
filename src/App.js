@@ -7,24 +7,33 @@ import NoteDirectory from './Components/Content/NoteDirectory/NoteDirectory'
 import uuid from 'react-uuid'
 
 const App = () => {
-  const [folders, setNotes] = useState([])
+  const [folders, setFolders] = useState([])
 
   const onAddFolder = () => {
-    const newNote = {
+    const newFolder = {
       id: uuid(),
       title: 'Untitled folder'
     }
-    setNotes([newNote,...folders])
+    setFolders([newFolder, ...folders])
   }
 
-
+  const [notes, setNotes] = useState([])
+  const onAddNotes = () => {
+    const newNote = {
+      id: uuid(),
+      title: 'Untitled note',
+      body: '',
+      lastModified: Date.now()
+    }
+    setNotes([newNote, ...notes])
+  }
 
   return (
     <Box>
-      <Header/>
+      <Header onAddNotes={onAddNotes} />
       <Stack sx={{ minHeight: 'calc(100vh - 66px)' }} direction="row">
         <FoldersComponent folders={folders} onAddFolder={onAddFolder}/>
-        <NoteDirectory/>
+        <NoteDirectory notes={notes}/>
         <Notes/>
       </Stack>
     </Box>

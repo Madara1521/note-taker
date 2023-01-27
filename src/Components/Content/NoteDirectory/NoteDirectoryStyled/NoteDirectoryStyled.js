@@ -7,6 +7,8 @@ export const useStylesDirectory = makeStyles(() => ({
 
   fileComponent: {
     display: 'flex',
+    justifyContent: 'space-between',
+    flexDirection: 'column',
     padding: '5px',
     cursor: 'pointer',
     '&:hover': {
