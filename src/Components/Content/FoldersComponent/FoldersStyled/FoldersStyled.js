@@ -16,6 +16,7 @@ export const useStyles = makeStyles(() => ({
     display: 'flex',
     padding: '5px',
     cursor: 'pointer',
+    justifyContent: 'space-between',
     '&:hover': {
       background: '#ddd'
     }

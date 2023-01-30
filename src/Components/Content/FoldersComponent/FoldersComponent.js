@@ -4,8 +4,9 @@ import { Box, Stack, Typography } from '@mui/material'
 import { useStyles } from './FoldersStyled/FoldersStyled'
 import { connect } from 'react-redux'
 import { setTitle } from '../../Redux/store'
+import HighlightOffOutlinedIcon from '@mui/icons-material/HighlightOffOutlined'
 
-const FoldersComponent = ({ folders, onAddFolder }) => {
+const FoldersComponent = ({ folders, onAddFolder, onDeleteFolders }) => {
   const classes = useStyles()
 
   return (
@@ -22,8 +23,9 @@ const FoldersComponent = ({ folders, onAddFolder }) => {
             {folders.map((folder) => (
               <div className={classes.foldersComponent}>
                 {folder.title}
+                <HighlightOffOutlinedIcon onClick={() => onDeleteFolders(folder.id)} />
               </div>
-            ))}
+              ))}
           </div>
           <Bottom onAddFolder={onAddFolder}/>
         </div>

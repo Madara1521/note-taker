@@ -17,4 +17,9 @@ export const useStylesDirectory = makeStyles(() => ({
     }
   },
 
+  titleAndDelete: {
+    display: 'flex',
+    justifyContent: 'space-between'
+  }
+
 }))

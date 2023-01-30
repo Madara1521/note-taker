@@ -6,7 +6,7 @@ import BorderColorOutlinedIcon from '@mui/icons-material/BorderColorOutlined'
 import { Box, Stack } from '@mui/material'
 import { Icons } from '../../StyledHeder/StyledAllHeader'
 
-const LeftButtons = ({ onAddNotes }) => {
+const LeftButtons = ({ onAddNotes, onDelete }) => {
   return (
     <Box flex={3}>
       <Stack direction="row" spacing={1}>
@@ -17,7 +17,7 @@ const LeftButtons = ({ onAddNotes }) => {
           <GridViewOutlinedIcon/>
         </Icons>
         <Icons>
-          <DeleteOutlineOutlinedIcon/>
+          <DeleteOutlineOutlinedIcon onClick={onDelete}/>
         </Icons>
         <Icons>
           <BorderColorOutlinedIcon onClick={onAddNotes}/>

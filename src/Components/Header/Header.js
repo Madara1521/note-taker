@@ -8,7 +8,7 @@ import { AppBarComponent, StyledToolbar } from './StyledHeder/StyledAllHeader'
 
 
 
-const Header = ({ onAddNotes }) => {
+const Header = ({ onAddNotes, onDelete }) => {
   return (
     <AppBarComponent>
       <StyledToolbar>
@@ -18,7 +18,7 @@ const Header = ({ onAddNotes }) => {
           </Typography>
           <FormatListBulletedOutlinedIcon sx={{ display: { xs: 'block', sm: 'none' } }}/>
         </Box>
-        <LeftButtons onAddNotes={onAddNotes}/>
+        <LeftButtons onAddNotes={onAddNotes} onDelete={onDelete} />
         <CenterButtons/>
         <RightButtons/>
       </StyledToolbar>
