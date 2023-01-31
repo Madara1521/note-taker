@@ -1,13 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Bottom from '../Bottom/Bottom'
 import { Box, Stack, Typography } from '@mui/material'
 import { useStyles } from './FoldersStyled/FoldersStyled'
-import { connect } from 'react-redux'
-import { setTitle } from '../../Redux/store'
 import HighlightOffOutlinedIcon from '@mui/icons-material/HighlightOffOutlined'
+import uuid from 'react-uuid'
 
-const FoldersComponent = ({ folders, onAddFolder, onDeleteFolders }) => {
+const FoldersComponent = () => {
   const classes = useStyles()
+
+  const [folders, setFolders] = useState([])
+  const onAddFolder = () => {
+    const newFolder = {
+      id: uuid(),
+      title: 'Untitled folder'
+    }
+    setFolders([newFolder, ...folders])
+  }
+
+  const onDeleteFolders = (idToDelete) => {
+    setFolders(folders.filter((folder) => folder.id !== idToDelete))
+  }
 
   return (
     <Box
@@ -23,9 +35,9 @@ const FoldersComponent = ({ folders, onAddFolder, onDeleteFolders }) => {
             {folders.map((folder) => (
               <div className={classes.foldersComponent}>
                 {folder.title}
-                <HighlightOffOutlinedIcon onClick={() => onDeleteFolders(folder.id)} />
+                <HighlightOffOutlinedIcon onClick={() => onDeleteFolders(folder.id)}/>
               </div>
-              ))}
+            ))}
           </div>
           <Bottom onAddFolder={onAddFolder}/>
         </div>
@@ -34,10 +46,5 @@ const FoldersComponent = ({ folders, onAddFolder, onDeleteFolders }) => {
   )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    title: state.title
-  }
-}
 
-export default connect(mapStateToProps, { setTitle })(FoldersComponent)
+export default FoldersComponent
