@@ -1,9 +1,15 @@
-import { combineReducers, createStore } from 'redux'
+import { createStore } from 'redux'
 
-let reducers = combineReducers({
+const initialState = {
+  title: 'Untitled folder'
+}
 
-})
+const reducer = (state = initialState, action) => {
+  console.log('reducer', action)
 
-let store = createStore(reducers)
+  return state
+}
+
+const store = createStore(reducer)
 
 export default store

@@ -6,7 +6,7 @@ import Notes from './Components/Content/Notes/Notes'
 import NoteDirectory from './Components/Content/NoteDirectory/NoteDirectory'
 import uuid from 'react-uuid'
 
-const App = () => {
+const App = (props) => {
 
   const [notes, setNotes] = useState([])
   const onAddNotes = () => {
