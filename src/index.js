@@ -4,7 +4,11 @@ import App from './App'
 import { ThemeProvider } from '@mui/material'
 import { theme } from './theme'
 import { Provider } from 'react-redux'
-import store from './Components/Redux/store'
+import { createStore } from 'redux'
+import { rootReducer } from './Components/Redux/rootReducer'
+
+
+const store = createStore(rootReducer)
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(

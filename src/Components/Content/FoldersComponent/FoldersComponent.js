@@ -1,26 +1,24 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Bottom from '../Bottom/Bottom'
 import { Box, Stack, Typography } from '@mui/material'
 import { useStyles } from './FoldersStyled/FoldersStyled'
 import HighlightOffOutlinedIcon from '@mui/icons-material/HighlightOffOutlined'
-import uuid from 'react-uuid'
-import { connect } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
+import {inputTitleFolder} from '../../Redux/actions'
 
 const FoldersComponent = (props) => {
   const classes = useStyles()
+  const title = useSelector(state => {
+    const {folderReducer} = state
+    return folderReducer.title
+  })
+  const dispatch = useDispatch()
 
-  const [folders, setFolders] = useState([])
-  const onAddFolder = () => {
-    const newFolder = {
-      id: uuid()
-    }
-    setFolders([newFolder, ...folders])
+  const handleChange = (e) => {
+    dispatch(inputTitleFolder(e.target.value))
   }
 
-  const onDeleteFolders = (idToDelete) => {
-    setFolders(folders.filter((folder) => folder.id !== idToDelete))
-  }
 
   return (
     <Box
@@ -33,32 +31,19 @@ const FoldersComponent = (props) => {
         </Typography>
         <div className={classes.container}>
           <div className={classes.folders}>
-            {folders.map((folder) => (
-              <div className={classes.foldersComponent}>
-                {props.title}
-                <HighlightOffOutlinedIcon onClick={() => onDeleteFolders(folder.id)}/>
-              </div>
-            ))}
+            <div>
+            <input type='title' onChange={handleChange}/>
+            </div>
+            {title}
+            <HighlightOffOutlinedIcon/>
           </div>
-          <Bottom onAddFolder={onAddFolder}/>
+          <Bottom />
         </div>
       </Stack>
     </Box>
   )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    title: state.title
-  }
-}
 
-const mapDispatchToProps =(dispatch) => {
-  return {
-    addFolders: () => {
-      console.log('click')
-    }
-  }
-}
 
-export default connect(mapStateToProps,mapDispatchToProps)(FoldersComponent)
+export default (FoldersComponent)
