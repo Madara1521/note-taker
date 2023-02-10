@@ -1,8 +1,9 @@
 import { ADD_FOLDER, DELETE_FOLDER, INPUT_TITLE_FOLDER} from './types'
 
-export function addFolders() {
+export function addFolders(title,id) {
   return {
-    type: ADD_FOLDER
+    type: ADD_FOLDER,
+    data: {title,id}
   }
 }
 

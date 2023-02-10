@@ -14,13 +14,23 @@ export const useStyles = makeStyles(() => ({
 
   foldersComponent: {
     display: 'flex',
-    padding: '5px',
+    padding: '3px',
     cursor: 'pointer',
     justifyContent: 'space-between',
     '&:hover': {
       background: '#ddd'
     }
   },
-
+  inputs: {
+    width: '100%',
+    border: '0',
+    padding: '5px 0',
+    borderBottom: '1px solid #f2f2f2',
+    outline: 'none',
+    resize: 'vertical'
+  },
+  ICloud: {
+    display: 'flex',
+  }
 }))
 

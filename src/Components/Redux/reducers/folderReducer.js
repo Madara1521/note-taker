@@ -1,9 +1,7 @@
-import uuid from 'react-uuid'
 import { ADD_FOLDER, DELETE_FOLDER, INPUT_TITLE_FOLDER } from '../types'
 
 const initialState = {
   folder: [],
-  id: uuid(),
   title: 'Untitled folder'
 }
 
@@ -13,7 +11,7 @@ export const folderReducer = (state = initialState, action) => {
     case ADD_FOLDER:
       return {
         ...state,
-        id: state.id
+        folder: [...state.folder, action.data]
       }
     case DELETE_FOLDER:
       return {
