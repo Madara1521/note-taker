@@ -1,4 +1,4 @@
-import { ADD_FOLDER, DELETE_FOLDER, INPUT_TITLE_FOLDER} from './types'
+import { ADD_FOLDER, DELETE_FOLDER, TITLE_UPDATE } from './types'
 
 export function addFolders(title,id) {
   return {
@@ -7,15 +7,19 @@ export function addFolders(title,id) {
   }
 }
 
-export function deleteFolders() {
+export function titleUpdate(title, id) {
   return {
-    type: DELETE_FOLDER
+    type: TITLE_UPDATE,
+    data: {title,id}
   }
 }
 
-export function inputTitleFolder(title) {
+export function deleteFolders(id) {
   return {
-    type: INPUT_TITLE_FOLDER,
-    title
+    type: DELETE_FOLDER,
+    id
   }
 }
+
+
+

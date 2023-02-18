@@ -1,4 +1,4 @@
-import { ADD_FOLDER, DELETE_FOLDER, INPUT_TITLE_FOLDER } from '../types'
+import { ADD_FOLDER, DELETE_FOLDER, TITLE_UPDATE } from '../types'
 
 const initialState = {
   folder: [],
@@ -13,16 +13,36 @@ export const folderReducer = (state = initialState, action) => {
         ...state,
         folder: [...state.folder, action.data]
       }
+    case TITLE_UPDATE:
+      const { data } = action
+      const { folder } = state
+      const itemIndex = folder.findIndex(res => res.id === data.id)
+
+      const nextFolder = [
+        ...folder.slice(0, itemIndex),
+        data,
+        ...folder.slice(itemIndex + 1)
+      ]
+      return {
+        ...state,
+        folder: nextFolder
+      }
     case DELETE_FOLDER:
-      return {
-        ...state,
-        id: state.id
-      }
-    case INPUT_TITLE_FOLDER:
-      return {
-        ...state,
-        title: action.title
-      }
+      return (() => {
+        const { id } = action
+        const { folder } = state
+        const itemIndex = folder.findIndex(res => res.id === id)
+
+        const nextFolder = [
+          ...folder.slice(0, itemIndex),
+          ...folder.slice(itemIndex + 1)
+        ]
+        return {
+          ...state,
+          folder: nextFolder
+        }
+      })()
+
     default:
       return state
   }

@@ -29,7 +29,7 @@ export const useStyles = makeStyles(() => ({
     outline: 'none',
     resize: 'vertical'
   },
-  ICloud: {
+  iCloud: {
     display: 'flex',
   }
 }))

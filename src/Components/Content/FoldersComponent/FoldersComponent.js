@@ -10,7 +10,7 @@ import { addFolders } from '../../Redux/actions'
 const FoldersComponent = (props) => {
   const classes = useStyles()
 
-  const [titleText, setTitleText] = useState('')
+  const [titleFolderText, setTitleFolderText] = useState('')
   const folder = useSelector(state => {
     const { folderReducer } = state
     return folderReducer.folder
@@ -19,13 +19,13 @@ const FoldersComponent = (props) => {
 
   const handleInput = (e) => {
     console.log('')
-    setTitleText(e.target.value)
+    setTitleFolderText(e.target.value)
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
     const id = uuid()
-    dispatch(addFolders(titleText, id))
+    dispatch(addFolders(titleFolderText, id))
   }
 
   return (
@@ -34,12 +34,12 @@ const FoldersComponent = (props) => {
       sx={{ display: { xs: 'none', sm: 'block' }, border: '1px solid #9e9e9e' }}
     >
       <Stack direction="column" alignItems="stretch" height="100%">
-        <div className={classes.ICloud}>
+        <div className={classes.iCloud}>
           <Typography>
             ICloud
           </Typography>
           <form onSubmit={handleSubmit}>
-            <input type="text" value={titleText} onChange={handleInput}/>
+            <input type="text" value={titleFolderText} onChange={handleInput}/>
             <input type="submit" hidden/>
           </form>
         </div>
