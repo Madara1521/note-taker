@@ -3,30 +3,26 @@ import Bottom from '../Bottom/Bottom'
 import { Box, Stack, Typography } from '@mui/material'
 import { useStyles } from './FoldersStyled/FoldersStyled'
 import SingleFolder from './SingleFolder'
-import { useDispatch, useSelector } from 'react-redux'
+import { connect, useSelector } from 'react-redux'
 import uuid from 'react-uuid'
 import { addFolders } from '../../Redux/actions'
 
-const FoldersComponent = (props) => {
+const FoldersComponent = ({ addFolders }) => {
   const classes = useStyles()
 
-  const [titleFolderText, setTitleFolderText] = useState('')
+  const [titleFolderText] = useState('Untitled folder')
   const folder = useSelector(state => {
     const { folderReducer } = state
     return folderReducer.folder
   })
-  const dispatch = useDispatch()
-
-  const handleInput = (e) => {
-    console.log('')
-    setTitleFolderText(e.target.value)
-  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
     const id = uuid()
-    dispatch(addFolders(titleFolderText, id))
+    addFolders(titleFolderText, id)
   }
+
+console.log('folders >>>', folder)
 
   return (
     <Box
@@ -38,22 +34,20 @@ const FoldersComponent = (props) => {
           <Typography>
             ICloud
           </Typography>
-          <form onSubmit={handleSubmit}>
-            <input type="text" value={titleFolderText} onChange={handleInput}/>
-            <input type="submit" hidden/>
-          </form>
         </div>
         <div className={classes.container}>
           <div className={classes.folders}>
             {!!folder.length && folder.map(res => {
-              return <SingleFolder key={res.id} data={res}/>
+              return <SingleFolder key={res.id} data={res} />
             })}
           </div>
+          <div onClick={handleSubmit}>
           <Bottom/>
+          </div>
         </div>
       </Stack>
     </Box>
   )
 }
 
-export default FoldersComponent
+export default connect(null,{addFolders})(FoldersComponent)

@@ -1,8 +1,7 @@
 import { ADD_FOLDER, DELETE_FOLDER, TITLE_UPDATE } from '../types'
 
 const initialState = {
-  folder: [],
-  title: 'Untitled folder'
+  folder: []
 }
 
 export const folderReducer = (state = initialState, action) => {
